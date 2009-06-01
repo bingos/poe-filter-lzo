@@ -6,6 +6,7 @@ license 'perl';
 auto_license holder => 'Chris Williams';
 version_from 'lib/POE/Filter/LZO.pm';
 abstract_from 'lib/POE/Filter/LZO.pm';
+perl_version '5.006';
 build_requires 'Test::More' => 0.47;
 build_requires 'POE::Filter::Stackable' => 0;
 build_requires 'POE::Filter::Line' => 0;
