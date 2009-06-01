@@ -7,7 +7,7 @@ use Compress::LZO qw(compress decompress);
 use vars qw($VERSION);
 use base qw(POE::Filter);
 
-$VERSION = '1.68';
+$VERSION = '1.70';
 
 sub new {
   my $type = shift;
@@ -115,7 +115,7 @@ suitable for use with L<POE::Filter::Stackable|POE::Filter::Stackable>.
 
 =over
 
-=item new
+=item C<new>
 
 Creates a new POE::Filter::LZO object. Takes one optional argument, 'level': the level of compression to employ.
 Consult L<Compress::LZO|Compress::LZO> for details.
@@ -126,23 +126,23 @@ Consult L<Compress::LZO|Compress::LZO> for details.
 
 =over
 
-=item get_one_start
+=item C<get_one_start>
 
-=item get_one
+=item C<get_one>
 
-=item get
+=item C<get>
 
 Takes an arrayref which is contains lines of compressed input. Returns an arrayref of decompressed lines.
 
-=item put
+=item C<put>
 
 Takes an arrayref containing lines of uncompressed output, returns an arrayref of compressed lines.
 
-=item clone
+=item C<clone>
 
 Makes a copy of the filter, and clears the copy's buffer.
 
-=item level
+=item C<level>
 
 Sets the level of compression employed to the given value. If no value is supplied, returns the current level setting.
 
@@ -150,11 +150,11 @@ Sets the level of compression employed to the given value. If no value is suppli
 
 =head1 AUTHOR
 
-Chris Williams <chris@bingosnet.co.uk>
+Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
 
 =head1 LICENSE
 
-Copyright (C) Chris Williams
+Copyright E<copy> Chris Williams
 
 This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
